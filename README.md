@@ -1,14 +1,7 @@
-# potrace
-Swift port of JavaScript Potrace port
+# Swift Potrace
 
-Notice:
+This is a pure Swift 3.1 port of the [JavaScropt port](https://github.com/kilobtye/potrace) of [Potrace](http://potrace.sourceforge.net) 
 
 Licensed under GPL v2.
 
 Ditsributed  without any waranty.
-
-potrace
-=======
-
-A Swift port of the [JavaScropt port](https://github.com/kilobtye/potrace) of [Potrace](http://potrace.sourceforge.net)
-
