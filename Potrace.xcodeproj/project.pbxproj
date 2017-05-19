@@ -12,6 +12,7 @@
 		9C7184291ECED57C003FDAE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C7184271ECED57C003FDAE6 /* Main.storyboard */; };
 		9C71842B1ECED57C003FDAE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C71842A1ECED57C003FDAE6 /* Assets.xcassets */; };
 		9C71842E1ECED57C003FDAE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C71842C1ECED57C003FDAE6 /* LaunchScreen.storyboard */; };
+		9CC319761ECED7BE00215604 /* Potrace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC319741ECED7BE00215604 /* Potrace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		9C71842A1ECED57C003FDAE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C71842D1ECED57C003FDAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C71842F1ECED57C003FDAE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CC319741ECED7BE00215604 /* Potrace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Potrace.swift; sourceTree = "<group>"; };
+		9CC319781ECED8D400215604 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +43,7 @@
 			children = (
 				9C7184221ECED57C003FDAE6 /* Potrace */,
 				9C7184211ECED57C003FDAE6 /* Products */,
+				9CC319771ECED8D400215604 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +60,21 @@
 			children = (
 				9C7184231ECED57C003FDAE6 /* AppDelegate.swift */,
 				9C7184251ECED57C003FDAE6 /* ViewController.swift */,
+				9CC319741ECED7BE00215604 /* Potrace.swift */,
 				9C7184271ECED57C003FDAE6 /* Main.storyboard */,
 				9C71842A1ECED57C003FDAE6 /* Assets.xcassets */,
 				9C71842C1ECED57C003FDAE6 /* LaunchScreen.storyboard */,
 				9C71842F1ECED57C003FDAE6 /* Info.plist */,
 			);
 			path = Potrace;
+			sourceTree = "<group>";
+		};
+		9CC319771ECED8D400215604 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CC319781ECED8D400215604 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C7184261ECED57C003FDAE6 /* ViewController.swift in Sources */,
+				9CC319761ECED7BE00215604 /* Potrace.swift in Sources */,
 				9C7184241ECED57C003FDAE6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +318,7 @@
 				9C7184341ECED57C003FDAE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
