@@ -174,9 +174,14 @@ final class Potrace {
 
         bm = Bitmap(width: width, height: height)
 
-        for index in 0..<bm.data.count {
-            let val = pixelData[index]
-            bm.data[index] = val < 128 ? 1 : 0
+        var j = 0, i = 0
+        
+        for _ in 0..<bm.data.count {
+            let val = 0.2126 * Double(pixelData[i]) + 0.7153 * Double(pixelData[i + 1]) +
+                0.0721 * Double(pixelData[i + 2])
+            bm.data[j] = val < 128 ? 1 : 0
+            i += 4
+            j += 1
         }
     }
 
