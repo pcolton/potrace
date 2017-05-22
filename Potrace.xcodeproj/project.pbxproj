@@ -23,6 +23,8 @@
 		9C71842A1ECED57C003FDAE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C71842D1ECED57C003FDAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C71842F1ECED57C003FDAE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CBAE0A71ED35D7D00A85940 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9CBAE0A81ED35D7D00A85940 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9CC319741ECED7BE00215604 /* Potrace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Potrace.swift; sourceTree = "<group>"; };
 		9CC319781ECED8D400215604 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -41,6 +43,8 @@
 		9C7184171ECED57B003FDAE6 = {
 			isa = PBXGroup;
 			children = (
+				9CBAE0A71ED35D7D00A85940 /* README.md */,
+				9CBAE0A81ED35D7D00A85940 /* LICENSE */,
 				9C7184221ECED57C003FDAE6 /* Potrace */,
 				9C7184211ECED57C003FDAE6 /* Products */,
 				9CC319771ECED8D400215604 /* Frameworks */,
@@ -58,15 +62,23 @@
 		9C7184221ECED57C003FDAE6 /* Potrace */ = {
 			isa = PBXGroup;
 			children = (
-				9C7184231ECED57C003FDAE6 /* AppDelegate.swift */,
 				9C7184251ECED57C003FDAE6 /* ViewController.swift */,
 				9CC319741ECED7BE00215604 /* Potrace.swift */,
+				9CBAE0AB1ED35DCA00A85940 /* General */,
+			);
+			path = Potrace;
+			sourceTree = "<group>";
+		};
+		9CBAE0AB1ED35DCA00A85940 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				9C7184231ECED57C003FDAE6 /* AppDelegate.swift */,
 				9C7184271ECED57C003FDAE6 /* Main.storyboard */,
 				9C71842A1ECED57C003FDAE6 /* Assets.xcassets */,
 				9C71842C1ECED57C003FDAE6 /* LaunchScreen.storyboard */,
 				9C71842F1ECED57C003FDAE6 /* Info.plist */,
 			);
-			path = Potrace;
+			name = General;
 			sourceTree = "<group>";
 		};
 		9CC319771ECED8D400215604 /* Frameworks */ = {

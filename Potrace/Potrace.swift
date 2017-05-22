@@ -1,6 +1,5 @@
 //
 //  Potrace.swift
-//  PhotoHero
 //
 //  Created by Paul Colton on 5/19/17.
 //  Copyright © 2017 Paul Colton. All rights reserved.
@@ -10,6 +9,11 @@
 //  See https://github.com/pcolton/potrace
 //
 //  Swift port of https://github.com/kilobtye/potrace/blob/master/potrace.js
+//
+//  Usage: let potrace = Potrace(data: UnsafeMutableRawPointer, width: Int, height: Int)
+//         potrace.process()
+//         let bezierPath = potrace.getBezierPath()
+//         let svgString = potrace.getSVG()
 //
 
 import Foundation

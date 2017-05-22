@@ -17,24 +17,21 @@ class ViewController: UIViewController {
 
         if let originalImage = original.image,
             let originalImageData = originalImage.pixelData() {
-            
+
             let potrace = Potrace(data: UnsafeMutableRawPointer(mutating: originalImageData),
                                   width: Int(originalImage.size.width),
                                   height: Int(originalImage.size.height))
             
             potrace.process()
-            
-            print(potrace.getSVG())
-            
+
             let bezier = potrace.getBezierPath(scale: 2.0)
-            let newImage = shapeImageWithCGPath(path: bezier, size: curves.frame.size)
-            
-            
+            let newImage = imageFromBezierPath(path: bezier, size: curves.frame.size)
+
             curves.image = newImage
         }
     }
 
-    func shapeImageWithCGPath(path: UIBezierPath, size: CGSize) -> UIImage {
+    func imageFromBezierPath(path: UIBezierPath, size: CGSize) -> UIImage {
         var image = UIImage()
         UIGraphicsBeginImageContext(size)
         if let context = UIGraphicsGetCurrentContext() {
@@ -69,5 +66,3 @@ extension UIImage {
         return pixelData
     }
 }
-
-
