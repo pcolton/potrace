@@ -1319,9 +1319,9 @@ final class Potrace {
         func path(curve: Curve, bezierPath: UIBezierPath) {
         
             func bezier(i: Int) {
-                bezierPath.addCurve(to: CGPoint(x: (curve.c[i * 3 + 0].x * size), y: (curve.c[i * 3 + 0].y * size)),
-                                    controlPoint1: CGPoint(x: (curve.c[i * 3 + 1].x * size), y: (curve.c[i * 3 + 1].y * size)),
-                                    controlPoint2: CGPoint(x: (curve.c[i * 3 + 2].x * size), y: (curve.c[i * 3 + 2].y * size)))
+                bezierPath.addCurve(to: CGPoint(x: (curve.c[i * 3 + 2].x * size), y: (curve.c[i * 3 + 2].y * size)),
+                                    controlPoint1: CGPoint(x: (curve.c[i * 3 + 0].x * size), y: (curve.c[i * 3 + 0].y * size)),
+                                    controlPoint2: CGPoint(x: (curve.c[i * 3 + 1].x * size), y: (curve.c[i * 3 + 1].y * size)))
             }
 
             func segment(i: Int) {
@@ -1342,8 +1342,6 @@ final class Potrace {
                     segment(i: i)
                 }
             }
-            
-            bezierPath.close()
         }
         
         let len = pathlist.count

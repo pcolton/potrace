@@ -24,35 +24,27 @@ class ViewController: UIViewController {
             
             potrace.process()
             
+            print(potrace.getSVG())
+            
             let bezier = potrace.getBezierPath(scale: 2.0)
-            let newImage = shapeImageWithCGPath(path: bezier.cgPath,
-                                                size: curves.frame.size,
-                                                fillColor: nil,
-                                                strokeColor: UIColor.black)
+            let newImage = shapeImageWithCGPath(path: bezier, size: curves.frame.size)
             
             
             curves.image = newImage
         }
     }
 
-    func shapeImageWithCGPath(path: CGPath, size: CGSize, fillColor: UIColor?, strokeColor: UIColor?, strokeWidth: CGFloat = 0.0) -> UIImage! {
-        
-        UIGraphicsBeginImageContext(size)
-        let context = UIGraphicsGetCurrentContext()
+    func shapeImageWithCGPath(path: UIBezierPath, size: CGSize) -> UIImage {
         var image = UIImage()
-        if let context  = context {
+        UIGraphicsBeginImageContext(size)
+        if let context = UIGraphicsGetCurrentContext() {
             context.saveGState()
-            context.addPath(path)
-            if strokeColor != nil {
-                strokeColor!.setStroke()
-                context.setLineWidth(strokeWidth)
-            } else { UIColor.clear.setStroke() }
-            fillColor?.setFill()
-            context.drawPath(using: .fillStroke)
+            path.fill()
             image = UIGraphicsGetImageFromCurrentImageContext()!
             context.restoreGState()
             UIGraphicsEndImageContext()
         }
+        
         return image
     }
 
